@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardPrice</title>
+
+  <style> 
+    .add { 
+      background-color: white;
+      padding: 20px;
+      margin: auto;
+      width: 50%; 
+      border: 3px solid #2128ad;
+      border-radius: 10px;
+      margin-top: 50vh;
+      transform: translateY(-50%);
+    }
+body{
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
+    .button {
+      margin: 12px; 
+      background-color: orange;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    }
+
+    .button:hover { 
+      background-color: rgb(25, 19, 100); 
+      transform: scale(1.05); 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Show quantity -->
+  <div class="add">
+    <button onclick="console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      Show Quantity
+    </button>
+
+    <!-- Add to cart -->
+    <button onclick="cartQuantity += 1; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      Add to Cart
+    </button>
+
+    <button onclick="cartQuantity -= 1; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      Remove from cart
+    </button>
+
+    <button onclick="cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      Reset to Zero
+    </button>
+
+    <button onclick="cartQuantity += 2; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      +2
+    </button>
+
+    <button onclick="cartQuantity += 3; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      +3
+    </button>
+
+    <button onclick="cartQuantity += 4; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      +4
+    </button>
+
+    <button onclick="cartQuantity += 5; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      +5
+    </button>
+
+    <button onclick="cartQuantity -= 2; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      -2
+    </button>
+
+    <button onclick="cartQuantity -= 3; console.log(`Cart quantity: $${cartQuantity}`);" class="button">
+      -3
+    </button>
+  </div>
+
+  <script>
+    let cartQuantity = 0;
+  </script>
+</body>
+</html>
